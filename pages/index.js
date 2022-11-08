@@ -1,42 +1,68 @@
 import React from "react";
 import Layout from "./components/Layout";
 import Marquee from "react-fast-marquee";
-import img1 from "../public/images/one.jpg";
-import img2 from "../public/images/two.jpg";
-import img3 from "../public/images/three.jpg";
-import img4 from "../public/images/four.jpg";
-import img5 from "../public/images/five.png";
-import img6 from "../public/images/six.png";
-import img7 from "../public/images/seven.jpg";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <Layout title="Home">
       <Marquee>
-        <div className="flex w-full h96">
-          <div>
-            <img src={img1} />
-          </div>
-          <div>
-            <img src={img2} />
-          </div>
-          <div>
-            <img src={img3} />
-          </div>
-          <div>
-            <img src={img4} />
-          </div>
-          <div>
-            <img src={img5} />
-          </div>
-          <div>
-            <img src={img6} />
-          </div>
-          <div>
-            <img src={img7} />
-          </div>
+        <div className="flex w-full h96 mt-1">
+          <img src="\images\one.jpg" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\two.jpg" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\three.jpg" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\four.jpg" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\five.png" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\six.png" width="700" height="700"></img>
+          <div className="mx-5"></div>
+          <img src="\images\seven.jpg" width="700" height="700"></img>
         </div>
       </Marquee>
+      <div className="my-52">
+        <div className="w-11/12 max-w-screen-lg my-0 mx-auto">
+          <ul className="flex">
+            <li className="mx-5 border-solid border-2 border-red-700 rounded">
+              <Link href={"/sub/${recommend.slug}"}>
+                <a>
+                  <img src="images/blog33.jpg" />
+                </a>
+              </Link>
+              <Link href={"/sub/${recommend.slug}"}>
+                <a>
+                  <h3 className="text-black font-normal text-xl leading-relaxed text-center">
+                    자전거 추천 받으러 가기
+                  </h3>
+                </a>
+              </Link>
+            </li>
+            <li className="mx-5 border-solid border-2 border-red-700 rounded">
+              <a href="">
+                <img src="images/blog22.jpg" />
+              </a>
+              <a href="">
+                <h3 className="text-black font-normal text-xl leading-relaxed text-center">
+                  수입사 사이트 바로가기
+                </h3>
+              </a>
+            </li>
+            <li className="mx-5 border-solid border-2 border-red-700 rounded">
+              <a href="">
+                <img src="images/blog11.jpg" />
+              </a>
+              <a href="">
+                <h3 className="text-black font-normal text-xl leading-relaxed text-center">
+                  도싸 바로가기
+                </h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </Layout>
   );
 }

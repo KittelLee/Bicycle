@@ -43,6 +43,7 @@ export default function Layout({ title, children }) {
             </button>
           </div>
         </div>
+        <hr />
       </header>
       <main>{children}</main>
       <footer className="flex h-20 justify-center items-center shadow-inner bg-red-100">
