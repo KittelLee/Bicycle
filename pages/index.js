@@ -54,7 +54,7 @@ export default function Home() {
               <a href="">
                 <img src="images/blog11.jpg" />
               </a>
-              <a href="">
+              <a href="https://corearoadbike.com/">
                 <h3 className="text-black font-normal text-xl leading-relaxed text-center">
                   도싸 바로가기
                 </h3>

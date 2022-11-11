@@ -21,26 +21,30 @@ export default function login() {
           </div>
           <div className="flex mb-4 justify-center">
             <div>
-              <button className="basic-button mx-0.5">로그인하기</button>
+              <button className="basic-button mx-0.5 w-40 font-semibold">
+                로그인하기
+              </button>
             </div>
             <div>
-              <button className="basic-button mx-0.5">회원가입하기</button>
+              <button className="basic-button mx-0.5 w-40 font-semibold">
+                회원가입하기
+              </button>
             </div>
           </div>
 
-          <div className="flex justify-between">
-            <div className="mb-2 w-2/4">
+          <div className="flex justify-center">
+            <div className="mb-2 w-full text-center">
               <button
-                className="rounded bg-green-500 py-2 shadow outline-none hover:bg-green-600 active:bg-green-700 w-full"
+                className="rounded bg-green-500 py-2 shadow outline-none hover:bg-green-600 active:bg-green-700 w-72 font-medium"
                 type="button"
                 onClick="#"
               >
                 Naver Login
               </button>
             </div>
-            <div className="mb-2 w-2/4">
+            <div className="mb-2 w-full text-center">
               <button
-                className="rounded bg-slate-200 py-2 shadow outline-none hover:bg-slate-300 active:bg-slate-400 w-full"
+                className="rounded bg-slate-200 py-2 shadow outline-none hover:bg-slate-300 active:bg-slate-400 w-72 font-medium"
                 type="button"
                 onClick="#"
               >
@@ -48,19 +52,20 @@ export default function login() {
               </button>
             </div>
           </div>
-          <div className="flex justify-between">
-            <div className="mb-2 w-2/4">
+
+          <div className="flex justify-center">
+            <div className="mb-2 w-full text-center">
               <button
-                className="rounded bg-amber-400 py-2 shadow outline-none hover:bg-amber-500 active:bg-amber-600 w-full"
+                className="rounded bg-amber-400 py-2 shadow outline-none hover:bg-amber-500 active:bg-amber-600 w-72 font-medium"
                 type="button"
                 onClick="#"
               >
                 Kakao Login
               </button>
             </div>
-            <div className="mb-2 w-2/4">
+            <div className="mb-2 w-full text-center">
               <button
-                className="rounded bg-blue-700 py-2 shadow outline-none hover:bg-blue-800 active:bg-blue-900 w-full"
+                className="rounded bg-blue-600 py-2 shadow outline-none hover:bg-blue-700 active:bg-blue-800 w-72 font-medium"
                 type="button"
                 onClick="#"
               >

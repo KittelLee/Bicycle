@@ -46,7 +46,7 @@ export default function Layout({ title, children }) {
           </div>
           <hr />
         </header>
-        <main className="container m-auto relative bottom-0">{children}</main>
+        <main className="my-auto">{children}</main>
         <footer className="flex h-20 justify-center items-center shadow-inner bg-red-100">
           <p>Copyright &copy; 2022 CycleSC_BicycleRecommendation</p>
         </footer>

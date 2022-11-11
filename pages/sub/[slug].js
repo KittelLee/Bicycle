@@ -15,7 +15,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col h-96 leading-8 overflow-scroll">
+          <div className="flex flex-col h-96 leading-8 overflow-scroll overflow-x-hidden">
             <h1 className="font-black">브랜드</h1>
             <label>
               <input type="checkbox" />
@@ -190,7 +190,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-8 overflow-scroll">
+          <div className="flex flex-col leading-8">
             <h1 className="font-black">분류</h1>
             <label>
               <input type="checkbox" />
@@ -210,7 +210,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-8 overflow-scroll">
+          <div className="flex flex-col leading-8">
             <h1 className="font-black">기어수</h1>
             <label>
               <input type="checkbox" />
@@ -237,7 +237,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-8 overflow-scroll">
+          <div className="flex flex-col leading-8">
             <h1 className="font-black">브레이크 타입</h1>
             <label>
               <input type="checkbox" />
@@ -249,7 +249,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-8 overflow-scroll">
+          <div className="flex flex-col leading-8">
             <h1 className="font-black">소재</h1>
             <label>
               <input type="checkbox" />
@@ -261,7 +261,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-7 overflow-scroll">
+          <div className="flex flex-col leading-7">
             <h1 className="font-black">무게</h1>
             <label>
               <input type="text" className="w-4/12 rounded-sm" />
@@ -291,7 +291,7 @@ export default function subPage() {
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
-          <div className="flex flex-col leading-7 overflow-scroll">
+          <div className="flex flex-col leading-7">
             <h1 className="font-black">가격</h1>
             <label>
               <input type="text" className="w-4/12 rounded-sm" />
@@ -327,7 +327,7 @@ export default function subPage() {
             초기화
           </button>
         </div>
-        <div className="w-10/12 bg-green-500">
+        <div className="w-10/12 bg-blue-400">
           <div className="flex">
             <div>
               <div class="mx-8 mt-8 mb-1 box-content h-62 w-62">
