@@ -15,40 +15,42 @@ export default function Layout({ title, children }) {
         <meta name="author" content="FactorTeam" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav className="flex px-8 py-3 justify-between">
-          <Link href="/">
-            <a className="text-5xl">CycleSC</a>
-          </Link>
-          <div className="pt-3">
-            <Link href="/login">
-              <a className="text-2xl">로그인</a>
+      <div className="flex min-h-screen flex-col">
+        <header>
+          <nav className="flex px-8 py-3 justify-between">
+            <Link href="/">
+              <a className="text-5xl">CycleSC</a>
             </Link>
-            &nbsp;<a className="text-2xl text-gray-300">|</a>&nbsp;
-            <Link href="/membership">
-              <a className="text-2xl">회원가입</a>
-            </Link>
+            <div className="pt-3">
+              <Link href="/login">
+                <a className="text-2xl">로그인</a>
+              </Link>
+              &nbsp;<a className="text-2xl text-gray-300">|</a>&nbsp;
+              <Link href="/register">
+                <a className="text-2xl">회원가입</a>
+              </Link>
+            </div>
+          </nav>
+          <hr />
+          <div className="flex px-8 py-3 justify-between">
+            <div>
+              <Marquee>❖ 자전거 추천 사이트에 오신것을 환영합니다!❖</Marquee>
+            </div>
+            <div className="flex border-solid border-2 border-grey-100 rounded">
+              <input type="text" placeholder="Search" />
+              <button type="button">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                검색
+              </button>
+            </div>
           </div>
-        </nav>
-        <hr />
-        <div className="flex px-8 py-3 justify-between">
-          <div>
-            <Marquee>❖ 자전거 추천 사이트에 오신것을 환영합니다!❖</Marquee>
-          </div>
-          <div className="flex border-solid border-2 border-grey-100 rounded">
-            <input type="text" placeholder="Search" />
-            <button type="button">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-              검색
-            </button>
-          </div>
-        </div>
-        <hr />
-      </header>
-      <main>{children}</main>
-      <footer className="flex h-20 justify-center items-center shadow-inner bg-red-100">
-        Copyright &copy; 2022 CycleSC_BicycleRecommendation
-      </footer>
+          <hr />
+        </header>
+        <main className="container m-auto relative bottom-0">{children}</main>
+        <footer className="flex h-20 justify-center items-center shadow-inner bg-red-100">
+          <p>Copyright &copy; 2022 CycleSC_BicycleRecommendation</p>
+        </footer>
+      </div>
     </Fragment>
   );
 }
