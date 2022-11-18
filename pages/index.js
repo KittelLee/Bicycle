@@ -41,24 +41,32 @@ export default function Home() {
               </Link>
             </li>
             <li className="mx-5 border-solid border-2 border-red-700 rounded">
-              <a href="">
-                <img src="images/blog22.jpg" />
-              </a>
-              <a href="">
-                <h3 className="text-black font-normal text-xl leading-relaxed text-center">
-                  수입사 사이트 바로가기
-                </h3>
-              </a>
+              <Link href="#">
+                <a>
+                  <img src="images/blog22.jpg" />
+                </a>
+              </Link>
+              <Link href="#">
+                <a>
+                  <h3 className="text-black font-normal text-xl leading-relaxed text-center">
+                    수입사 사이트 바로가기
+                  </h3>
+                </a>
+              </Link>
             </li>
             <li className="mx-5 border-solid border-2 border-red-700 rounded">
-              <a href="">
-                <img src="images/blog11.jpg" />
-              </a>
-              <a href="https://corearoadbike.com/">
-                <h3 className="text-black font-normal text-xl leading-relaxed text-center">
-                  도싸 바로가기
-                </h3>
-              </a>
+              <Link href={"https://corearoadbike.com/"} passHref>
+                <a>
+                  <img src="images/blog11.jpg" />
+                </a>
+              </Link>
+              <Link href={"https://corearoadbike.com/"} passHref>
+                <a>
+                  <h3 className="text-black font-normal text-xl leading-relaxed text-center">
+                    도싸 바로가기
+                  </h3>
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

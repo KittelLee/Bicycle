@@ -2,9 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { Fragment } from "react";
-import Marquee from "react-fast-marquee";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Modal from "./Modal";
 
 export default function Layout({ title, children }) {
   return (
@@ -34,13 +32,28 @@ export default function Layout({ title, children }) {
           <hr />
           <div className="flex px-8 py-3 justify-between">
             <div>
-              <Marquee>❖ 자전거 추천 사이트에 오신것을 환영합니다!❖</Marquee>
+              <Modal />
             </div>
-            <div className="flex border-solid border-2 border-grey-100 rounded">
+
+            <div className="flex">
+              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                전체보기
+              </button>
+              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                자전거 추천 받으러 가기
+              </button>
+              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                수입사 사이트 바로가기
+              </button>
+              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                도싸 바로가기
+              </button>
+            </div>
+
+            <div className="flex border-solid border-2 border-grey-100 rounded p-2">
               <input type="text" placeholder="Search" />
-              <button type="button">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                검색
+              <button type="button" className="text-xl">
+                🔍
               </button>
             </div>
           </div>
