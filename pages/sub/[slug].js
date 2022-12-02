@@ -5,7 +5,7 @@ export default function subPage() {
   return (
     <Layout>
       <div className="flex">
-        <div className="w-2/12 bg-blue-300 pl-4">
+        <div className="w-2/12 bg-gray-200 pl-4">
           <div className="py-1">
             <h1 className="font-black">제품명</h1>
             <label>
@@ -202,6 +202,10 @@ export default function subPage() {
             </label>
             <label>
               <input type="checkbox" />
+              <span className="font-semibold"> 사이클로크로스(CX)</span>
+            </label>
+            <label>
+              <input type="checkbox" />
               <span className="font-semibold"> 그래블(GRAVEL)</span>
             </label>
             <label>
@@ -323,11 +327,14 @@ export default function subPage() {
               <span className="font-semibold"> 2000만원 이하</span>
             </label>
           </div>
-          <button className="border-solid border-2 bg-white my-3">
+          <button className="border-solid border-2 bg-white my-3 mr-4">
             초기화
           </button>
+          <button className="border-solid border-2 bg-white my-3">
+            검색하기
+          </button>
         </div>
-        <div className="w-10/12 bg-blue-400">
+        <div className="w-10/12 bg-white">
           <div className="flex">
             <div>
               <div class="mx-8 mt-8 mb-1 box-content h-62 w-62">

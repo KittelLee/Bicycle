@@ -36,18 +36,29 @@ export default function Layout({ title, children }) {
             </div>
 
             <div className="flex">
-              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
-                전체보기
-              </button>
-              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
-                자전거 추천 받으러 가기
-              </button>
-              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
-                수입사 사이트 바로가기
-              </button>
-              <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
-                도싸 바로가기
-              </button>
+              <Link href={"/"} passHref>
+                <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                  메인으로 가기
+                </button>
+              </Link>
+
+              <Link href={"/sub/${recommend.slug}"} passHref>
+                <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                  자전거 추천 받으러 가기
+                </button>
+              </Link>
+
+              <Link href={"/sub/second"} passHref>
+                <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                  수입사 사이트 바로가기
+                </button>
+              </Link>
+
+              <Link href={"https://corearoadbike.com/"} passHref>
+                <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
+                  도싸 바로가기
+                </button>
+              </Link>
             </div>
 
             <div className="flex border-solid border-2 border-grey-100 rounded p-2">
@@ -60,7 +71,7 @@ export default function Layout({ title, children }) {
           <hr />
         </header>
         <main className="my-auto">{children}</main>
-        <footer className="flex h-20 justify-center items-center shadow-inner bg-red-100">
+        <footer className="flex h-20 justify-center items-center shadow-inner bg-blue-100">
           <p>Copyright &copy; 2022 CycleSC_BicycleRecommendation</p>
         </footer>
       </div>

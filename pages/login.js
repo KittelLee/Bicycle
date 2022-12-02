@@ -4,18 +4,18 @@ import Layout from "./components/Layout";
 export default function login() {
   return (
     <Layout title="Login">
-      <div className="mx-auto max-w-screen-md px-2 py-2 border-2 border-solid">
+      <div className="mx-auto max-w-screen-md px-2 py-2 border-4 border-solid">
         <h1 className="mb-16 text-7xl text-center font-semibold">Login</h1>
-        <form className="border border-solid p-2 max-w-screen-sm mx-auto">
+        <form className="border-2 border-solid p-2 max-w-screen-sm mx-auto">
           <div className="flex flex-col mb-4">
             <input
               type="id"
-              className="mb-2 p-2 border border-solid"
+              className="mb-2 p-2 border-2 border-solid"
               placeholder="아이디"
             ></input>
             <input
               type="password"
-              className="p-2 border border-solid"
+              className="p-2 border-2 border-solid"
               placeholder="비밀번호"
             ></input>
           </div>

@@ -41,12 +41,12 @@ export default function Home() {
               </Link>
             </li>
             <li className="mx-5 border-solid border-2 border-red-700 rounded">
-              <Link href="/sub/second">
+              <Link href={"/sub/second"}>
                 <a>
                   <img src="images/blog22.jpg" />
                 </a>
               </Link>
-              <Link href="/sub/second">
+              <Link href={"/sub/second"}>
                 <a>
                   <h3 className="text-black font-normal text-xl leading-relaxed text-center">
                     수입사 사이트 바로가기
