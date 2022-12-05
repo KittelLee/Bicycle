@@ -327,10 +327,10 @@ export default function subPage() {
               <span className="font-semibold"> 2000만원 이하</span>
             </label>
           </div>
-          <button className="border-solid border-2 bg-white my-3 mr-4">
+          <button className="border-solid border-2 bg-white my-3 mr-4 px-2 py-1 hover:bg-gray-300">
             초기화
           </button>
-          <button className="border-solid border-2 bg-white my-3">
+          <button className="border-solid border-2 bg-white my-3 px-2 py-1 hover:bg-gray-300">
             검색하기
           </button>
         </div>

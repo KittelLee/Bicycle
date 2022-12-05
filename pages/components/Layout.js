@@ -62,10 +62,14 @@ export default function Layout({ title, children }) {
             </div>
 
             <div className="flex border-solid border-2 border-grey-100 rounded p-2">
-              <input type="text" placeholder="Search" />
-              <button type="button" className="text-xl">
-                🔍
-              </button>
+              <form
+                method="get"
+                action="http://www.google.co.kr/search"
+                target="_blank"
+              >
+                <input type="text" name="q" placeholder="search" />
+                <input type="submit" name="btnG" value="🔍" />
+              </form>
             </div>
           </div>
           <hr />
