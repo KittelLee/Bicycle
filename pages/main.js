@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout2";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
 
@@ -27,12 +27,12 @@ export default function Home() {
         <div className="w-11/12 max-w-screen-lg my-0 mx-auto">
           <ul className="flex">
             <li className="mx-5 border-solid border-2 border-red-700 rounded">
-              <Link href={"/login"}>
+              <Link href={"/sub/${recommend.slug}"}>
                 <a>
                   <img src="images/blog33.jpg" />
                 </a>
               </Link>
-              <Link href={"/login"}>
+              <Link href={"/sub/${recommend.slug}"}>
                 <a>
                   <h3 className="text-black font-normal text-xl leading-relaxed text-center">
                     자전거 추천 받으러 가기

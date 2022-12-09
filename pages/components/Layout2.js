@@ -20,8 +20,8 @@ export default function Layout({ title, children }) {
               <a className="text-5xl">CycleSC</a>
             </Link>
             <div className="pt-3">
-              <Link href="/login">
-                <a className="text-2xl">로그인</a>
+              <Link href="/">
+                <a className="text-2xl">로그아웃</a>
               </Link>
               &nbsp;<a className="text-2xl text-gray-300">|</a>&nbsp;
               <Link href="/register">
@@ -42,7 +42,7 @@ export default function Layout({ title, children }) {
                 </button>
               </Link>
 
-              <Link href={"/login"} passHref>
+              <Link href={"/sub/${recommend.slug}"} passHref>
                 <button className="mx-2 py-2 px-4 text-white bg-gray-500 rounded hover:bg-gray-700">
                   자전거 추천 받으러 가기
                 </button>

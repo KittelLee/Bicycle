@@ -1,10 +1,19 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout2";
 
 export default function subPage() {
   const refresh = () => {
     window.location.reload();
   };
+
+  function checkAll() {
+    let isChecked = document.getElementById("chkall").checked;
+    let chks = document.getElementsByName("ca[]");
+    for (let i = 0; i < chks.length; i++) {
+      chks[i].checked = isChecked;
+    }
+  }
+
   return (
     <Layout>
       <div className="flex">
@@ -21,7 +30,7 @@ export default function subPage() {
           <div className="flex flex-col h-96 leading-8 overflow-scroll overflow-x-hidden">
             <h1 className="font-black">브랜드</h1>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" id="chkall" onClick={checkAll} />
               <span className="font-semibold"> 전부포함</span>
             </label>
             <label>

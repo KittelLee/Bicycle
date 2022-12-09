@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout2";
 import Image from "next/image";
 
 export default function detail() {
@@ -11,9 +11,7 @@ export default function detail() {
           <h3>Bicycle name en</h3>
           {/* <Image src={} /> */}
           <p>Bicycle image</p>
-          <table>
-            
-          </table>
+          <table></table>
         </div>
       </div>
     </Layout>

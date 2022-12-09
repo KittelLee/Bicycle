@@ -6,24 +6,32 @@ export default function login() {
     <Layout title="Login">
       <div className="mx-auto max-w-screen-md px-2 py-2 border-4 border-solid">
         <h1 className="mb-16 text-7xl text-center font-semibold">Login</h1>
-        <form className="border-2 border-solid p-2 max-w-screen-sm mx-auto">
+        <form
+          action="api/login"
+          method="post"
+          className="border-2 border-solid p-2 max-w-screen-sm mx-auto"
+        >
           <div className="flex flex-col mb-4">
             <input
               type="id"
+              name="userid"
               className="mb-2 p-2 border-2 border-solid"
               placeholder="아이디"
             ></input>
             <input
               type="password"
+              name="password"
               className="p-2 border-2 border-solid"
               placeholder="비밀번호"
             ></input>
           </div>
           <div className="flex mb-4 justify-center">
             <div>
-              <button className="basic-button mx-0.5 w-40 font-semibold">
-                로그인하기
-              </button>
+              <input
+                type="submit"
+                className="basic-button mx-0.5 w-40 font-semibold"
+                value="로그인 하기"
+              ></input>
             </div>
             <div>
               <button className="basic-button mx-0.5 w-40 font-semibold">
