@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout2";
 import Data from "../../utils/data";
 import axios from "axios";
+import Link from "next/link";
 
 export default function SubPage() {
   const [query, setQuery] = useState({
@@ -142,7 +143,9 @@ export default function SubPage() {
             <label>
               <input type="text" className="w-6/12 rounded-sm" />
               &nbsp;
-              <button className="border-solid border-1 bg-white">검색</button>
+              <Link href={"/sub/slug"}>
+                <button className="border-solid border-1 bg-white">검색</button>
+              </Link>
             </label>
           </div>
           <hr className="w-11/12 my-2 border-0 h-0.5 bg-black" />
