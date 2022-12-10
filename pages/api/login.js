@@ -1,8 +1,8 @@
-import connect from "../../utils/db";
+import db from "../../utils/db";
 import mongoose from "mongoose";
 import User from "../../model/schema";
 
-connect();
+db.connect();
 
 export default async function loginhandler(req, res) {
   User.findOne({ userid: req.body.userid }, (err, user) => {
