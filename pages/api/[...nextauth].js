@@ -21,25 +21,25 @@ export default NextAuth({
   //   },
   // },
   providers: [
-    // CredentialsProvider({
-    //   async authorize(credentials) {
-    //     await db.connect();
-    //     const user = await User.findOne({
-    //       email: credentials.email,
-    //     });
-    //     await db.disconnect();
-    //     if (user && bcryptjs.compareSync(credentials.password, user.password)) {
-    //       return {
-    //         _id: user._id,
-    //         name: user.name,
-    //         email: user.email,
-    //         image: "f",
-    //         isAdmin: user.isAdmin,
-    //       };
-    //     }
-    //     throw new Error("Invalid email or password");
-    //   },
-    // }),
+    CredentialsProvider({
+      async authorize(credentials) {
+        await db.connect();
+        const user = await User.findOne({
+          email: credentials.email,
+        });
+        await db.disconnect();
+        if (user && bcryptjs.compareSync(credentials.password, user.password)) {
+          return {
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            image: "f",
+            isAdmin: user.isAdmin,
+          };
+        }
+        throw new Error("Invalid email or password");
+      },
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
