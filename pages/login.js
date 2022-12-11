@@ -1,7 +1,61 @@
 import React from "react";
 import Layout from "./components/Layout";
+import Link from "next/link";
 
 export default function login() {
+  const googleLoginHandler = async () => {
+    try {
+      // eslint-disable-next-line no-unused-vars
+      const result = await signIn("google", {
+        redirect: false,
+      });
+    } catch (err) {
+      toast.error(getError(err));
+    }
+  };
+  const kakaoLoginHandler = async () => {
+    try {
+      // eslint-disable-next-line no-unused-vars
+      const result = await signIn("kakao", {
+        redirect: false,
+      });
+    } catch (err) {
+      toast.error(getError(err));
+    }
+  };
+  const naverLoginHandler = async () => {
+    try {
+      // eslint-disable-next-line no-unused-vars
+      const result = await signIn("naver", {
+        redirect: false,
+      });
+    } catch (err) {
+      toast.error(getError(err));
+    }
+  };
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: "{your-app-id}",
+      cookie: true,
+      xfbml: true,
+      version: "{api-version}",
+    });
+
+    FB.AppEvents.logPageView();
+  };
+
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "facebook-jssdk");
+
   return (
     <Layout title="Login">
       <div className="mx-auto max-w-screen-md px-2 py-2 border-4 border-solid">
@@ -34,9 +88,11 @@ export default function login() {
               ></input>
             </div>
             <div>
-              <button className="basic-button mx-0.5 w-40 font-semibold">
-                회원가입하기
-              </button>
+              <Link href="/register">
+                <button className="basic-button mx-0.5 w-40 font-semibold">
+                  회원가입하기
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -45,7 +101,7 @@ export default function login() {
               <button
                 className="rounded bg-green-500 py-2 shadow outline-none hover:bg-green-600 active:bg-green-700 w-72 font-medium"
                 type="button"
-                onClick="#"
+                onClick={naverLoginHandler}
               >
                 Naver Login
               </button>
@@ -54,7 +110,7 @@ export default function login() {
               <button
                 className="rounded bg-slate-200 py-2 shadow outline-none hover:bg-slate-300 active:bg-slate-400 w-72 font-medium"
                 type="button"
-                onClick="#"
+                onClick={googleLoginHandler}
               >
                 Google Login
               </button>
@@ -66,7 +122,7 @@ export default function login() {
               <button
                 className="rounded bg-amber-400 py-2 shadow outline-none hover:bg-amber-500 active:bg-amber-600 w-72 font-medium"
                 type="button"
-                onClick="#"
+                onClick={kakaoLoginHandler}
               >
                 Kakao Login
               </button>
